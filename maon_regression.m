@@ -81,8 +81,8 @@ Interv_I1 = I_1_higher - I_1_lower;
 half_I1 = Interv_I1/2;
 
 % confidence interval associated with beta2 = c
-I_2_lower = c - (1.9720)*sqrt(big_sigma_hat(3,3));
-I_2_higher = c + (1.9720)*sqrt(big_sigma_hat(3,3));
+I_2_lower = c - (1.96)*sqrt(big_sigma_hat(3,3));
+I_2_higher = c + (1.96)*sqrt(big_sigma_hat(3,3));
 Interv_I2 = I_2_higher - I_2_lower;
 half_I2 = Interv_I2/2;
 % where m-2 is 199 and t_gamma,m-2 is 1.9720 from the t-tables

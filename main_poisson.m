@@ -52,23 +52,23 @@ flag = 0;
 [A1, b1] = poisson.getmatvec(m, flag);
 
 %x1 = mylinearsolver(A1, b1);
-x1=b1\A1;
+x1=A1\b1;
 poisson.vizsoln(x1,flag);
-%%%%%%%%%%%%
+%%%%%%%%%%%
 m = 3 ;
 flag = 1;
 [A2, b2] = poisson.getmatvec(m, flag);
 
 %x2 = mylinearsolver(A2, b2);
-x2=b2\A2;
+x2=A2\b2;
 poisson.vizsoln(x2,flag);
-%%%%%%%%%%%
+%%%%%%%%%%
 m = 9 ;
 flag = 0;
 [A3, b3] = poisson.getmatvec(m, flag);
 
 %x3 = mylinearsolver(A3, b3);
-x3=b3\A3;
+x3=A3\b3;
 poisson.vizsoln(x3,flag);
 %%%%%%%%%%%%%
 m = 9 ;
@@ -76,15 +76,15 @@ flag = 1;
 [A4, b4] = poisson.getmatvec(m, flag);
 
 %x4 = mylinearsolver(A4, b4);
-x4=b4\A4;
+x4=A4\b4;
 poisson.vizsoln(x4,flag);
-%%%%%%%%%%%
+%%%%%%%%%%
 m = 18 ;
 flag = 0;
 [A5, b5] = poisson.getmatvec(m, flag);
 
-%x5 = mylinearsolver(A5, b5);
-x5 = b5\A5;
+x5 = mylinearsolver(A5, b5);
+x5 = A5\b5;
 poisson.vizsoln(x5,flag);
 %%%%%%%%%
 m = 18 ;
@@ -92,7 +92,7 @@ flag = 1;
 [A6, b6] = poisson.getmatvec(m, flag);
 
 %x6 = mylinearsolver(A6, b6);
-x6 = b6\A6;
+x6 = A6\b6;
 poisson.vizsoln(x6,flag);
 
 
