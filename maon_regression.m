@@ -3,8 +3,8 @@
 % noise between different points 
 
 dt = 0.05;
-T = 10;
-%T = 1.0050e+03;
+%T = 10;
+T = 1.0050e+03;
 
 y = signal_sampler(dt, T);
 
@@ -26,7 +26,7 @@ y_model = @(t,a,b,c)  a*cos(w*t)+b*sin(w*t) + c;
 X = zeros (length(y), 3);
 
 for i = 1:3
-    for j = 1:201
+    for j = 1:length(y)
         if i ==1
             X(j,i) = cos(w*t(j));
         elseif i ==2
@@ -81,8 +81,8 @@ Interv_I1 = I_1_higher - I_1_lower;
 half_I1 = Interv_I1/2;
 
 % confidence interval associated with beta2 = c
-I_2_lower = c - (1.96)*sqrt(big_sigma_hat(3,3));
-I_2_higher = c + (1.96)*sqrt(big_sigma_hat(3,3));
+I_2_lower = c - (1.9720)*sqrt(big_sigma_hat(3,3));
+I_2_higher = c + (1.9720)*sqrt(big_sigma_hat(3,3));
 Interv_I2 = I_2_higher - I_2_lower;
 half_I2 = Interv_I2/2;
 % where m-2 is 199 and t_gamma,m-2 is 1.9720 from the t-tables
